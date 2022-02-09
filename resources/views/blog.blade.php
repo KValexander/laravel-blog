@@ -19,6 +19,7 @@
 					<p>{{ $val->description }}</p>
 					<p>Категория: <b>{{ $val->category }}</b></p>
 					<p class="small"><a href="{{ route('post_update_page', ['blog_id' => $val->parent_id, 'post_id' => $val->entry_id]) }}">Изменить</a> <a href="{{ route('post_delete', ['blog_id' => $val->parent_id, 'post_id' => $val->entry_id]) }}" onclick="return confirm('Вы действительно хотите удалить этот пост?')">Удалить</a></p>
+					<p class="small">{{ $val->created_at }}</p>
 				</div>
 			</div>
 		@endforeach

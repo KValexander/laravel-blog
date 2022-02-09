@@ -11,7 +11,7 @@ class PostController extends Controller {
 	public function post_add(Request $request) {
 		$name = strip_tags($request->input("name"));
 		$category = strip_tags($request->input("category"));
-		$description = strip_tags($request->input("description"));
+		$description = substr(strip_tags($request->input("description")), 0, 256);
 		$content = $request->input("content");
 
 		$blog_id = $request->route("blog_id");

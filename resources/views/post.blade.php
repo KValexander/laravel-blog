@@ -5,5 +5,6 @@
 	<div class="wrap p4">
 		{!! $post->content !!}
 		<br><p>Категория: <b>{{ $post->category }}</b></p>
+		<p>Дата написания: <b>{{ $post->created_at }}</b></p>
 	</div>
 @endsection
